@@ -132,10 +132,10 @@ document.getElementById("all-btn").addEventListener("click",(e)=>filterData('all
 document.getElementById("open-btn").addEventListener("click",(e)=>filterData('open',e));
 document.getElementById("close-btn").addEventListener("click",(e)=>filterData('closed',e));
 
-// document.getElementById("search-btn").addEventListener("input",(el)=>{
-//   const searchText=el.target.value.toLowerCase();
-//   const searchData=allData.filter(item=>item.title.toLowerCase().includes(searchText) || item.description.toLowerCase().includes(searchText));
-//   displayCard(searchData);
-// });
+document.getElementById("search-btn").addEventListener("input",(el)=>{
+  const searchText=el.target.value.toLowerCase();
+  const searchData=allData.filter(item=>item.title.toLowerCase().includes(searchText) || item.description.toLowerCase().includes(searchText));
+  displayCard(searchData);
+});
 
 loadCard();
