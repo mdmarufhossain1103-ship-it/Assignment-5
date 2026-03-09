@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <!-- DaisyUI+Tailwind -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="w-[33%] mx-auto shadow-2xl p-10 my-25">
+          <div class="text-center space-y-5">
+              <div class="flex justify-center items-center">
+                <img src="./assets/github-logo.png" alt="">
+              </div>
+            <h2 class="text-4xl font-bold">GitHub Issues Tracker</h2>
+            <p class="text-[#64748B]">Sign in to manage your issues</p>
+        </div>
+        <form action="" class="mt-5 space-y-3">
+            <div class="space-y-2">
+            <label for="" class="text-2xl font-bold">Username</label><br>
+            <input id="name-btn" type="text" name="" id="" placeholder="Enter Username" class="p-2 w-full rounded-md">
+            <p class="text-[#4A00FF]">Default: admin</p>
+            </div>
+            <div class="space-y-2">
+            <label for="" class="text-2xl font-bold">Password</label><br>
+            <input id="password-btn" type="text" name="" id="" placeholder="Enter Password" class="p-2 w-full rounded-md">
+            <p class="text-[#4A00FF]">Default: admin123</p>
+            </div>
+        </form>
+        <button id="input-btn" class="btn btn-primary w-full rounded-md mt-5">Sign In</button>
+
+        <div class="flex items-center gap-3 mt-7">
+            <hr class="flex-1 border-gray-300">
+            <p >OR</p>
+            <hr class="flex-1 border-gray-300">
+        </div>
+        <div class="text-center mt-8">
+            <h2 class="text-[#64748B]">Demo Credentials:</h2>
+           <div class="mt-8">
+             <p><span class="font-bold">Username:</span> admin</p>
+             <p><span class="font-bold">Password: </span> admin123</p>
+           </div>
+        </div>
+    </section>
+    <!-- <script src="./script.js/form.js"></script> -->
+</body>
+</html>

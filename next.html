@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Trakar</title>
+    <!-- DaisyUI+Tailwind -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- <nav class="flex justify-between p-5 shadow items-center">
+     <div class="flex items-center gap-3">
+        <img src="./assets/github-logo.png" alt="">
+        <h2 class="text-2xl font-bold">GitHub Issues Tracker</h2>
+     </div>
+     <div>
+    <div class="flex gap-2 items-center">
+    <label class="input">
+  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.3-4.3"></path>
+    </g>
+  </svg>
+  <input id="search-btn" type="search" required placeholder="Search issues..." />
+</label>
+<p class="btn btn-primary">+ New Issue</p>
+        </div>
+     </div>
+    </nav> -->
+
+    <!-- <section class="w-[72%] mx-auto mt-20 flex gap-5 shadow p-5">
+      <h2 id="all-btn" class="btn btn-primary md:w-[8%] bg-change">All</h2>
+      <h2 id="open-btn" class="btn  md:w-[8%] bg-change">Open</h2>
+      <h2 id="close-btn" class="btn  md:w-[8%] bg-change">Colsed</h2>
+    </section> -->
+
+    <!-- <section class="w-[72%] mx-auto mt-5 flex justify-between shadow p-7 flex-col md:flex-row">
+      <div class="flex gap-2">
+        <img src="./assets/Aperture.png" alt="">
+       <div>
+         <h2 class="font-bold"><span id="issue-cnt">50</span> Issues</h2>
+        <p class="text-[#64748B] whitespace-nowrap">Track and manage your project issues</p>
+       </div>
+      </div>
+      <div class="flex gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-[50%] bg-green-600"></div>
+          <p>open</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-[50%] bg-purple-600"></div>
+          <p>open</p>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="load-card" class="w-[72%] mx-auto mt-5 bg-[#FBFBFB] p-5 grid grid-cols-1 md:grid-cols-4 gap-5">
+        <!-- <div class="shadow p-5 rounded-2xl">
+          <div class="flex justify-between mb-5">
+            <img src="./assets/Open-Status.png" alt="">
+            <p class="font-bold  border rounded-full w-[35%] flex items-center justify-center">High</p>
+          </div>
+          <div class="my-3">
+            <h2 class="text-xl font-bold">Fix navigation menu on mobile devices</h2>
+          <p class="text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices...</p>
+          </div>
+          <div class="flex gap-5 mb-4">
+            <div class="flex "><img src="./assets/BugDroid.png" alt="">BUG</div>
+            <div class="flex"><img src="./assets/Lifebuoy.png" alt="">help wanted</div>
+          </div>
+          <hr class="text-[#64748B] mb-2">
+          <div class="space-y-2">
+            <p>#1 by john_doe</p>
+            <p>1/15/2024</p>
+          </div>
+        </div> -->
+    </section>
+
+    <!-- <section id="loading-spinner" class="w-[72%] mx-auto px-120 py-20 hidden">
+      <span class="loading loading-spinner text-primary"></span>
+    </section> -->
+
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+   <div id="detail-container">
+    <div>
+      <h2 class="text-xl font-bold">Fix broken image uploads</h2>
+      <div class="inline-block space-x-1.5">
+        <p>Opened</p>
+        <p>. Opened by Fahim Ahmed</p>
+        <p>. 22/02/2026</p>
+      </div>
+      <div class="flex gap-5 mb-4">
+            <div class="flex "><img src="./assets/BugDroid.png" alt="">BUG</div>
+            <div class="flex"><img src="./assets/Lifebuoy.png" alt="">help wanted</div>
+        </div>
+        <p class="text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices...</p>
+        <div class="flex bg-gray-200 justify-around">
+          <div>
+            <p>Assignee:</p>
+            <p>Fahim Ahmed</p>
+          </div>
+          <div>
+            <p>Priority:</p>
+            <p>High</p>
+          </div>
+        </div>
+    </div>
+   </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    
+    <!-- <script src="./script.js/main.js"></script> -->
+</body>
+</html>
