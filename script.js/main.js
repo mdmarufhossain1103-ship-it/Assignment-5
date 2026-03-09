@@ -8,18 +8,18 @@ let issueCnt=(count)=>{
 }
 
 const loadCard=()=>{
-    // const spnnier=document.getElementById("loading-spinner")
-    // const nextCard=document.getElementById("load-card");
-    // spnnier.classList.remove("hidden");
-    // nextCard.classList.add("hidden");
+    const spnnier=document.getElementById("loading-spinner")
+    const nextCard=document.getElementById("load-card");
+    spnnier.classList.remove("hidden");
+    nextCard.classList.add("hidden");
     fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then(res=>res.json())
     .then(data=>{
       allData=data.data;
       displayCard(allData);
       issueCnt(allData.length);
-    //   spnnier.classList.add("hidden");
-    //   nextCard.classList.remove("hidden");
+      spnnier.classList.add("hidden");
+      nextCard.classList.remove("hidden");
     });
 };
 
