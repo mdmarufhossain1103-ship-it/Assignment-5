@@ -1,4 +1,4 @@
-<!-- 1.
+1.
 Var: Var is a keyword which can reassigned and redeclared.
 Let:Let is a keyword which can reassigned but not redeclared.
 Const: Const is a keyword which can't reassigned and redeclared.
@@ -12,4 +12,4 @@ foreach: foreach executes a funtion for each element, but doesn't return a new a
 
 4. An arrow function is a shorter syntax for writing functions in javascript.
 
-5.Templete literals are string are written in brackets () that allow embbed variables and expression using ${}`. -->
+5.Templete literals are string are written in brackets () that allow embbed variables and expression using ${}`.
