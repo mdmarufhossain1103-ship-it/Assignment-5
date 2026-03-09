@@ -23,53 +23,53 @@ const loadCard=()=>{
     });
 };
 
-// const loadIssueDetail=(id)=>{
-//   fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`)
-//   .then(res=>res.json())
-//   .then(data=>diplayLoadIssueDetail(data.data));
-// }
+const loadIssueDetail=(id)=>{
+  fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`)
+  .then(res=>res.json())
+  .then(data=>diplayLoadIssueDetail(data.data));
+}
 
-// const diplayLoadIssueDetail=(issues)=>{
-//   const detailContainer=document.getElementById("detail-container");
-//   let bgColor=issues.status === "open"?"bg-green-500": "bg-purple-500";
-//    const lebels=issues.labels.map(label=>`
-//           <div class="flex items-center gap-1 bg-red-200 text-xs px-1 py-2 rounded-full">${label} </div>
-//           `).join('');
-//           let levelColor="";
-//          if(issues.priority==="high"){
-//           levelColor="bg-red-500"
-//          }else if (issues.priority==="medium"){
-//           levelColor="bg-yellow-500"
-//          }
-//          else if (issues.priority==="low"){
-//           levelColor="bg-purple-500"
-//          }
-//   detailContainer.innerHTML=`
-//       <div>
-//       <h2 class="text-xl font-bold">${issues.title}</h2>
-//       <div class="flex gap-1.5 mb-3">
-//         <p class="${bgColor} rounded-full px-2">${issues.status}</p>
-//         <p class="text-gray-300">. Opened by ${issues.assignee}</p>
-//         <p class="text-gray-300">. ${issues.updatedAt}</p>
-//       </div>
-//        <div class="flex gap-5 mb-4">
-//            ${lebels}
-//           </div>
-//         <p class="text-[#64748B] mb-3">${issues.description}</p>
-//         <div class="flex bg-gray-200 justify-around p-5 rounded-2xl">
-//           <div>
-//             <p>Assignee:</p>
-//             <p>${issues.assignee}</p>
-//           </div>
-//           <div>
-//             <p>Priority:</p>
-//             <p class="${levelColor} rounded-full px-3 text-white">${issues.priority}</p>
-//           </div>
-//         </div>
-//     </div>
-//   `
-//   document.getElementById("my_modal_1").showModal();
-// }
+const diplayLoadIssueDetail=(issues)=>{
+  const detailContainer=document.getElementById("detail-container");
+  let bgColor=issues.status === "open"?"bg-green-500": "bg-purple-500";
+   const lebels=issues.labels.map(label=>`
+          <div class="flex items-center gap-1 bg-red-200 text-xs px-1 py-2 rounded-full">${label} </div>
+          `).join('');
+          let levelColor="";
+         if(issues.priority==="high"){
+          levelColor="bg-red-500"
+         }else if (issues.priority==="medium"){
+          levelColor="bg-yellow-500"
+         }
+         else if (issues.priority==="low"){
+          levelColor="bg-purple-500"
+         }
+  detailContainer.innerHTML=`
+      <div>
+      <h2 class="text-xl font-bold">${issues.title}</h2>
+      <div class="flex gap-1.5 mb-3">
+        <p class="${bgColor} rounded-full px-2">${issues.status}</p>
+        <p class="text-gray-300">. Opened by ${issues.assignee}</p>
+        <p class="text-gray-300">. ${issues.updatedAt}</p>
+      </div>
+       <div class="flex gap-5 mb-4">
+           ${lebels}
+          </div>
+        <p class="text-[#64748B] mb-3">${issues.description}</p>
+        <div class="flex bg-gray-200 justify-around p-5 rounded-2xl">
+          <div>
+            <p>Assignee:</p>
+            <p>${issues.assignee}</p>
+          </div>
+          <div>
+            <p>Priority:</p>
+            <p class="${levelColor} rounded-full px-3 text-white">${issues.priority}</p>
+          </div>
+        </div>
+    </div>
+  `
+  document.getElementById("my_modal_1").showModal();
+}
 
 const displayCard=(cards)=>{
     const nextCard=document.getElementById("load-card");
