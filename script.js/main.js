@@ -49,7 +49,7 @@ const diplayLoadIssueDetail=(issues)=>{
       <h2 class="text-xl font-bold">${issues.title}</h2>
       <div class="flex gap-1.5 mb-3">
         <p class="${bgColor} rounded-full px-2">${issues.status}</p>
-        <p class="text-gray-300">. Opened by ${issues.assignee}</p>
+        <p class="text-gray-300">. ${issues.status} by ${issues.assignee}</p>
         <p class="text-gray-300">. ${issues.updatedAt}</p>
       </div>
        <div class="flex gap-5 mb-4">
