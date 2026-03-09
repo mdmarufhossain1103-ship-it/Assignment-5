@@ -1,11 +1,11 @@
-// let allData=[];
+let allData=[];
 
-// let issueCnt=(count)=>{
-//   const countElement=document.getElementById("issue-cnt");
-//   if(countElement){
-//     countElement.innerText=count;
-//   }
-// }
+let issueCnt=(count)=>{
+  const countElement=document.getElementById("issue-cnt");
+  if(countElement){
+    countElement.innerText=count;
+  }
+}
 
 const loadCard=()=>{
     // const spnnier=document.getElementById("loading-spinner")
@@ -116,21 +116,21 @@ const displayCard=(cards)=>{
 };
 
 
-// const filterData=(status,event)=>{
-//   document.querySelectorAll('.bg-change').forEach(btn=>{
-//     btn.classList.remove("btn-primary");
-//   });
-//   if(event){
-//     event.target.classList.add("btn-primary");
-//   }
-//   const filtered=status==='all'? allData : allData.filter(item=>item.status===status);
-//   displayCard(filtered);
-//   issueCnt(filtered.length);
-// };
+const filterData=(status,event)=>{
+  document.querySelectorAll('.bg-change').forEach(btn=>{
+    btn.classList.remove("btn-primary");
+  });
+  if(event){
+    event.target.classList.add("btn-primary");
+  }
+  const filtered=status==='all'? allData : allData.filter(item=>item.status===status);
+  displayCard(filtered);
+  issueCnt(filtered.length);
+};
 
-// document.getElementById("all-btn").addEventListener("click",(e)=>filterData('all',e));
-// document.getElementById("open-btn").addEventListener("click",(e)=>filterData('open',e));
-// document.getElementById("close-btn").addEventListener("click",(e)=>filterData('closed',e));
+document.getElementById("all-btn").addEventListener("click",(e)=>filterData('all',e));
+document.getElementById("open-btn").addEventListener("click",(e)=>filterData('open',e));
+document.getElementById("close-btn").addEventListener("click",(e)=>filterData('closed',e));
 
 // document.getElementById("search-btn").addEventListener("input",(el)=>{
 //   const searchText=el.target.value.toLowerCase();
